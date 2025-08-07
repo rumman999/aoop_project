@@ -1,0 +1,15 @@
+#JobSeekerVBox {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-border-color: #e0e0e0;
+    -fx-padding: 25px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);
+}
+
+#JobSeekerVBox:hover {
+    -fx-background-color: #f0f8ff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 3);
+    -fx-scale-x: 1.10;
+    -fx-scale-y: 1.10;
+}
