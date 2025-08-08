@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<?import java.lang.String?>
+<AnchorPane prefHeight="800.0" prefWidth="1000.0"
+            style="-fx-background-color: #f8f9fa;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.aoop_project.loginController">
+
+    <!-- Wrap the GridPane inside a StackPane to center -->
+    <StackPane AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
+
+        <GridPane
+                hgap="40" vgap="0" prefHeight="740" prefWidth="900"
+                alignment="CENTER">
+
+            <!-- Left Column: Logo and Subtitle -->
+            <VBox GridPane.columnIndex="0" alignment="CENTER_LEFT" spacing="20"
+                  style="-fx-padding: 20;" prefWidth="400">
+                <TextFlow>
+                    <Text style="-fx-font-size:72px;-fx-font-weight:bold;-fx-fill:#333333;" text="Skill" />
+                    <Text style="-fx-font-size:72px;-fx-font-weight:bold;-fx-fill:#e67e22;" text="Plus" />
+                </TextFlow>
+                <Label style="-fx-font-size:20px; -fx-text-fill:#666666;" wrapText="true" prefWidth="350"
+                       text="Your gateway to learning, hiring, and career growth" />
+            </VBox>
+
+            <!-- Right Column: Login / Signup Forms -->
+            <StackPane GridPane.columnIndex="1" prefWidth="400" prefHeight="520" alignment="CENTER">
+
+                <!-- Login Form -->
+                <VBox fx:id="loginForm" alignment="CENTER" spacing="15"
+                      style="-fx-background-color:white; -fx-background-radius:15; -fx-border-radius:15;
+                             -fx-border-color: #e0e0e0; -fx-padding:30;
+                             -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);"
+                      maxWidth="400">
+
+                    <Label text="Login" style="-fx-font-size:20px; -fx-font-weight:bold; -fx-text-fill:#2c3e50;" />
+
+                    <TextField fx:id="loginEmailField" promptText="Email"
+                               style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#ccc;" maxWidth="320"/>
+                    <PasswordField fx:id="loginPasswordField" promptText="Password"
+                                   style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#ccc;" maxWidth="320"/>
+
+                    <Button text="Login" onAction="#handleLogin"
+                            prefWidth="200"
+                            style="-fx-background-color:#3498db; -fx-text-fill:white; -fx-background-radius:8;
+                                   -fx-font-size:14px; -fx-font-weight:bold; -fx-padding:10 20 10 20;" />
+
+                    <!-- Toggle to Signup -->
+                    <HBox alignment="CENTER" spacing="5" style="-fx-padding:10 0 0 0;">
+                        <Label text="Don't have an account?" style="-fx-text-fill:#7f8c8d; -fx-font-size:12px;" />
+                        <Button text="Sign Up" onAction="#showSignupForm"
+                                style="-fx-background-color:transparent; -fx-text-fill:#e67e22; -fx-font-weight:bold;
+                                       -fx-underline:true; -fx-cursor:hand; -fx-font-size:12px;" />
+                    </HBox>
+                </VBox>
+
+                <!-- Signup Form -->
+                <VBox fx:id="signupForm" alignment="CENTER" spacing="15"
+                      visible="false" managed="false"
+                      style="-fx-background-color:white; -fx-background-radius:15; -fx-border-radius:15;
+                             -fx-border-color: #e0e0e0; -fx-padding:30;
+                             -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);"
+                      maxWidth="400">
+
+                    <Label text="Sign Up" style="-fx-font-size:20px; -fx-font-weight:bold; -fx-text-fill:#2c3e50;" />
+
+                    <TextField fx:id="signupNameField" promptText="Full Name"
+                               style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#ccc;" maxWidth="320"/>
+                    <TextField fx:id="signupEmailField" promptText="Email"
+                               style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#ccc;" maxWidth="320"/>
+                    <PasswordField fx:id="signupPasswordField" promptText="Password"
+                                   style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#ccc;" maxWidth="320"/>
+                    <PasswordField fx:id="signupConfirmPasswordField" promptText="Confirm Password"
+                                   style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#ccc;" maxWidth="320"/>
+                    <TextField fx:id="signupPhoneField" promptText="Phone Number"
+                               style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#ccc;" maxWidth="320"/>
+
+                    <ComboBox fx:id="signupAccountType" promptText="Account Type"
+                              style="-fx-background-radius:8; -fx-border-radius:8; -fx-border-color:#ccc;" maxWidth="320">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Jobseeker" />
+                                <String fx:value="Recruiter" />
+                                <String fx:value="Admin" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+
+                    <Button text="Sign Up" onAction="#handleSignup"
+                            prefWidth="200"
+                            style="-fx-background-color:#27ae60; -fx-text-fill:white; -fx-background-radius:8;
+                                   -fx-font-size:14px; -fx-font-weight:bold; -fx-padding:10 20 10 20;" />
+
+                    <!-- Toggle to Login -->
+                    <HBox alignment="CENTER" spacing="5" style="-fx-padding:10 0 0 0;">
+                        <Label text="Already have an account?" style="-fx-text-fill:#7f8c8d; -fx-font-size:12px;" />
+                        <Button text="Login" onAction="#showLoginForm"
+                                style="-fx-background-color:transparent; -fx-text-fill:#3498db; -fx-font-weight:bold;
+                                       -fx-underline:true; -fx-cursor:hand; -fx-font-size:12px;" />
+                    </HBox>
+                </VBox>
+
+            </StackPane>
+
+        </GridPane>
+    </StackPane>
+</AnchorPane>
