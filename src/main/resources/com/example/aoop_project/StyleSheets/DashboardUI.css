@@ -1,0 +1,165 @@
+
+.navBtn{
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color :  #10231c;
+    -fx-font-size: 18px;
+}
+
+
+.navBtn:hover{
+    -fx-background-color: #214A3C;
+    -fx-cursor: hand;
+    -fx-text-fill: #FFFFFF;
+}
+.search{
+    -fx-background-color: transparent;
+         -fx-border-color: transparent transparent #4ef5c6 transparent; /* underline only */
+         -fx-border-width: 0 0 2 0;
+         -fx-text-fill: #ffffff;
+         -fx-font-size: 14px;
+         -fx-prompt-text-fill: #9e9e9e; /* soft gray placeholder */
+         -fx-padding: 6 0 6 25; /* space for icon */
+}
+.search:focused{
+    -fx-border-color: transparent transparent #00e6a8 transparent; /* brighter underline */
+        -fx-border-width: 0 0 2 0;
+}
+.ScrollPane{
+    -fx-background-color :  #214A3C;
+}
+.musicPlay{
+    -fx-background-color :  #214A3C;
+    -fx-text-fill : white;
+}
+.musicPlay:hover{
+    -fx-scale-x : 1.1;
+    -fx-scale-y : 1.1;
+    -fx-cursor : hand;
+}
+.viewBtn{
+    -fx-background-color :  #00F270;
+    -fx-text-fill : #10231c;
+}
+.viewBtn:hover{
+    -fx-scale-x : 1.1;
+    -fx-scale-y : 1.1;
+    -fx-cursor : hand;
+}
+.custom-scroll {
+    -fx-background: #10231c;
+    -fx-background-color: #10231c;
+    -fx-hbar-policy: never;
+    -fx-vbar-policy: never;
+}
+
+.custom-scroll .viewport {
+    -fx-background-color: #10231c; /* ✅ This one actually affects inside */
+}
+.Learn {
+    -fx-background-color: linear-gradient(to right, #10231c, #1a3d33, #234546, #1a3d33);
+        -fx-background-radius: 16;
+        -fx-padding: 20;
+}
+.viewBtnLogin{
+    -fx-background-color :  orange;
+    -fx-text-fill : #10231c;
+    -fx-background-radius: 30px;         /* makes button pill/oval */
+    -fx-padding: 8px 24px;
+    -fx-font-size: 18px;                 /* slightly smaller font */
+    -fx-font-weight: bold;/* adjust height/width proportions */
+}
+.viewBtnLogin:hover{
+    -fx-cursor : hand;
+    -fx-background-color: #e65c00;
+    -fx-font-size: 18px;                 /* slightly smaller font */
+    -fx-font-weight: bold;
+}
+.LoginBox{
+    -fx-border-color : orange;
+    -fx-border-width : 0.2em;
+    -fx-border-radius : 20px;
+}
+.loginEmail{
+    -fx-background-color: transparent;
+             -fx-border-color: transparent transparent #4ef5c6 transparent; /* underline only */
+             -fx-border-width: 0 0 2 0;
+             -fx-text-fill: #ffffff;
+             -fx-font-size: 14px;
+             -fx-prompt-text-fill: #9e9e9e; /* soft gray placeholder */
+             -fx-padding: 6 0 6 25; /* space for icon */
+}
+.loginEmail:hover{
+    -fx-scale-x : 1.05;
+    -fx-scale-y : 1.05;
+}
+.loginbg{
+    -fx-background-color: linear-gradient(to bottom right,
+            #10231c,   /* your base dark green */
+                    #0d1c16,   /* slightly deeper green */
+                    #162d24,   /* muted green for balance */
+                    #1a362b    /* dark teal-green depth */
+        );
+}
+/* ComboBox base (Account Type box) */
+.combo-box {
+    -fx-background-color: transparent;      /* no solid fill */
+    -fx-border-color: #3ddc97;              /* same green line as text fields */
+    -fx-border-width: 0 0 2px 0;            /* underline only */
+    -fx-text-fill: white;                   /* selected text color */
+    -fx-text-size : 12px;
+    -fx-prompt-text-fill: white;            /* "Recruiter" placeholder text */
+}
+
+/* The arrow button (right-side dropdown indicator) */
+.combo-box .arrow-button {
+    -fx-background-color: transparent;      /* blend with background */
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: white;            /* make arrow white */
+}
+
+/* Dropdown list background + text */
+.combo-box-popup .list-view {
+    -fx-background-color: #10231c;          /* dark green background */
+    -fx-control-inner-background: #10231c;
+    -fx-border-color: #3ddc97;              /* green border for popup */
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: white;                   /* normal option text */
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: #1a362b;          /* greenish hover highlight */
+    -fx-text-fill: white;                 /* hover text turns green */
+}
+.combo-box .text {
+    -fx-fill: white; /* Set the selected/shown text color to white */
+}
+
+.signUpbtn {
+    -fx-background-color: orange;        /* button fill */
+    -fx-text-fill: black;                /* text color */
+    -fx-font-size: 18px;                 /* slightly smaller font */
+    -fx-font-weight: bold;
+
+    /* Rounded/oval shape */
+    -fx-background-radius: 30px;         /* makes button pill/oval */
+    -fx-padding: 8px 24px;               /* adjust height/width proportions */
+    -fx-cursor: hand;                    /* cursor pointer effect */
+
+    /* Subtle shadow for depth */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 6, 0.2, 0, 2);
+}
+
+/* Hover effect */
+.signUpbtn:hover {
+    -fx-background-color: #e65c00;       /* brighter orange */
+}
+
+
+
+
+
+
