@@ -109,5 +109,34 @@ public class JobSeekerDashboardController implements Initializable {
 
 }
 
+    @FXML
+    private void handleMusic(ActionEvent e) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/aoop_project/LofiMusic.fxml"));
+            Parent root = loader.load();
+
+            Stage musicStage = new Stage();
+            musicStage.setScene(new Scene(root));
+
+            // Make it float above dashboard
+            musicStage.initOwner(((Node) e.getSource()).getScene().getWindow());
+            musicStage.initModality(Modality.NONE); // background remains interactive
+
+            // Small popup size
+            musicStage.setWidth(380);
+            musicStage.setHeight(200);
+            musicStage.setResizable(false);
+
+            // Optional: remove taskbar icon and keep it utility style
+            musicStage.initStyle(StageStyle.UTILITY);
+
+            // Show popup
+            musicStage.show();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            // Provide better error handling here (e.g., show alert to user)
+        }
+    }
+
 
 }
